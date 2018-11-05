@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.RegisterActivity">
+    <include layout="@layout/toolbar"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical"
+        >
+        <EditText
+            android:inputType="text"
+            android:id="@+id/et_username"
+            android:hint="请输入用户名"
+            style="@style/et_text" />
+        <EditText
+            android:inputType="textPassword"
+            android:id="@+id/et_password"
+            android:hint="请输入密码"
+            style="@style/et_text" />
+        <EditText
+            android:inputType="textPassword"
+            android:id="@+id/et_repassword"
+            android:hint="请再次输入密码"
+            style="@style/et_text" />
+        <EditText
+            android:inputType="phone"
+            android:id="@+id/et_phone"
+            android:hint="请输入手机号"
+            style="@style/et_text" />
+        <RelativeLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/btn_cancel"
+                android:text="取消"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                />
+            <Button
+                android:id="@+id/btn_register"
+                android:text="注册"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                />
+        </RelativeLayout>
+    </LinearLayout>
+
+</RelativeLayout>

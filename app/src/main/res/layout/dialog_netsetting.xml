@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="网络设置"
+        android:textSize="30dp"
+        android:background="@android:color/darker_gray"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:id="@+id/table"
+        >
+
+        <TableRow android:gravity="center">
+            <TextView
+                android:text="服务器地址:"
+                android:textSize="20dp"
+                />
+            <EditText
+                android:inputType="text"
+                android:id="@+id/ip"
+                style="@style/et_text"
+                android:imeOptions="actionNext"
+                android:nextFocusForward="@+id/port"
+                android:singleLine="true"
+                />
+        </TableRow>
+        <TableRow android:gravity="center">
+            <TextView
+                android:gravity="right"
+                android:text="端口:"
+                android:textSize="20dp"
+                />
+            <EditText
+                android:digits="0123456789"
+                android:imeOptions="actionDone"
+                android:inputType="phone"
+                android:id="@+id/port"
+                style="@style/et_text"
+                />
+        </TableRow>
+    </TableLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        >
+        <Button
+            android:text="确定"
+            android:id="@+id/yes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <Button
+            android:text="取消"
+            android:id="@+id/no"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

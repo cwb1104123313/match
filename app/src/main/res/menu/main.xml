@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:id="@+id/account" android:title="账户管理"></item>
+    <item android:id="@+id/account" android:title="账单管理"></item>
+    <item android:id="@+id/car_account" android:title="小车充值"></item>
     <item android:id="@+id/select_bus" android:title="公交查询"></item>
     <item android:id="@+id/light_setting" android:title="红绿灯设置"></item>
     <item android:id="@+id/car_peccancy" android:title="车辆违章"></item>
@@ -10,6 +11,4 @@
     <item android:id="@+id/environment" android:title="环境指标"></item>
     <item android:id="@+id/data_historical" android:title="传感器数据历史记录"></item>
     <item android:id="@+id/accountThreshold" android:title="账户阈值"></item>
-
-
 </menu>

@@ -14,9 +14,11 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.administrator.match.R;
-import com.example.administrator.match.fragment.Fragment_environment;
+import com.example.administrator.match.fragment.BillingManageActivity;
+import com.example.administrator.match.fragment.SetCarAccountRechargeFragment;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -60,9 +62,13 @@ public class MainActivity extends AppCompatActivity {
             public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
                 transaction=fragmentManager.beginTransaction();
                 switch (menuItem.getItemId()){
-                    case 0:
-                        transaction.replace(R.id.frame,list.get(menuItem.getItemId()));
+                    case R.id.account:
+                        transaction.replace(R.id.frame,list.get(0));
                         break;
+                    case R.id.car_account:
+                        //Toast.makeText(MainActivity.this, "jsdlkfjaldsjkf", Toast.LENGTH_SHORT).show();
+                        transaction.replace(R.id.frame,list.get(1));
+                    break;
                 }
                 transaction.commit();
                 drawer.closeDrawers();
@@ -79,8 +85,8 @@ public class MainActivity extends AppCompatActivity {
         actionBarDrawerToggle.syncState();
 
         list=new ArrayList<>();
-        list.add(new Fragment_environment());
-
+        list.add(new BillingManageActivity());
+        list.add(new SetCarAccountRechargeFragment());
 
     }
 

@@ -18,6 +18,7 @@ import android.widget.Toast;
 
 import com.example.administrator.match.R;
 import com.example.administrator.match.fragment.BillingManageActivity;
+import com.example.administrator.match.fragment.Fragment_environment;
 import com.example.administrator.match.fragment.SetCarAccountRechargeFragment;
 
 import java.util.ArrayList;
@@ -39,6 +40,9 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+
+
         fragmentManager=getSupportFragmentManager();
         findviews();
 
@@ -61,14 +65,17 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
                 transaction=fragmentManager.beginTransaction();
+                Toast.makeText(MainActivity.this, ""+menuItem.getItemId(), Toast.LENGTH_SHORT).show();
                 switch (menuItem.getItemId()){
                     case R.id.account:
                         transaction.replace(R.id.frame,list.get(0));
                         break;
-                    case R.id.car_account:
-                        //Toast.makeText(MainActivity.this, "jsdlkfjaldsjkf", Toast.LENGTH_SHORT).show();
+                    case R.id.car_peccancy:
                         transaction.replace(R.id.frame,list.get(1));
-                    break;
+                        break;
+                    case R.id.environment:
+                        transaction.replace(R.id.frame,list.get(2));
+                        break;
                 }
                 transaction.commit();
                 drawer.closeDrawers();
@@ -87,6 +94,7 @@ public class MainActivity extends AppCompatActivity {
         list=new ArrayList<>();
         list.add(new BillingManageActivity());
         list.add(new SetCarAccountRechargeFragment());
+        list.add(new Fragment_environment());
 
     }
 

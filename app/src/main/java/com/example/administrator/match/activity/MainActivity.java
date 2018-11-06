@@ -71,7 +71,7 @@ public class MainActivity extends AppCompatActivity {
                     case R.id.account:
                         transaction.replace(R.id.frame,list.get(0));
                         break;
-                    case R.id.car_peccancy:
+                    case R.id.car_account:
                         transaction.replace(R.id.frame,list.get(1));
                         break;
                     case R.id.environment:

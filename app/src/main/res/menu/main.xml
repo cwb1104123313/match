@@ -12,4 +12,7 @@
     <item android:id="@+id/personal" android:title="个人中心"></item>
     <item android:id="@+id/data_historical" android:title="传感器数据历史记录"></item>
     <item android:id="@+id/accountThreshold" android:title="账户阈值"></item>
+
+
+
 </menu>

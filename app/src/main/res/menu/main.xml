@@ -5,6 +5,7 @@
     <item android:id="@+id/environment" android:title="环境指标"></item>
     <item android:id="@+id/select_bus" android:title="公交查询"></item>
     <item android:id="@+id/light_setting" android:title="红绿灯设置"></item>
+    <item android:id="@+id/road_setting" android:title="路灯设置"></item>
     <item android:id="@+id/car_peccancy" android:title="车辆违章"></item>
     <item android:id="@+id/select_roads" android:title="路况查询"></item>
     <item android:id="@+id/data_analysis" android:title="数据分析"></item>

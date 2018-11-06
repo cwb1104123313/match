@@ -19,6 +19,7 @@ import android.widget.Toast;
 import com.example.administrator.match.R;
 import com.example.administrator.match.fragment.BillingManageActivity;
 import com.example.administrator.match.fragment.Fragment_environment;
+import com.example.administrator.match.fragment.Fragment_road;
 import com.example.administrator.match.fragment.SetCarAccountRechargeFragment;
 
 import java.util.ArrayList;
@@ -76,6 +77,8 @@ public class MainActivity extends AppCompatActivity {
                     case R.id.environment:
                         transaction.replace(R.id.frame,list.get(2));
                         break;
+                    case R.id.road_setting:
+                        transaction.replace(R.id.frame,list.get(3));
                 }
                 transaction.commit();
                 drawer.closeDrawers();
@@ -95,6 +98,7 @@ public class MainActivity extends AppCompatActivity {
         list.add(new BillingManageActivity());
         list.add(new SetCarAccountRechargeFragment());
         list.add(new Fragment_environment());
+        list.add(new Fragment_road());
 
     }
 
